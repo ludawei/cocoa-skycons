@@ -544,14 +544,14 @@ void leaf(CGContextRef ctx, double t, CGFloat x, CGFloat y, CGFloat cw, CGFloat 
   CGContextAddArc(ctx, x - b * e, y - b * f, c, d + M_PI, d, 1);
   CGContextAddArc(ctx, x + c * e, y + c * f, b, d + M_PI, d, 0);
 	
-  CGContextSetBlendMode(ctx, kCGBlendModeDestinationOut);
+//  CGContextSetBlendMode(ctx, kCGBlendModeDestinationOut);
 	CGContextBeginTransparencyLayer(ctx, NULL);
 	CGContextFillPath(ctx);
 	
 	CGContextEndTransparencyLayer(ctx);
 
   CGContextStrokePath(ctx);
-	CGContextSetBlendMode(ctx, kCGBlendModeNormal);
+//	CGContextSetBlendMode(ctx, kCGBlendModeNormal);
 }
 
 void swoosh(CGContextRef ctx, double t, CGFloat cx, CGFloat cy, CGFloat cw, CGFloat s, NSInteger index, double total, CGColorRef color)
